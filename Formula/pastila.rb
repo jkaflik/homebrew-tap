@@ -5,22 +5,22 @@
 class Pastila < Formula
   desc "Command line client for pastila.nl"
   homepage "https://github.com/jkaflik/pastila-cli"
-  version "0.0.4"
+  version "0.1.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jkaflik/pastila-cli/releases/download/v0.0.4/pastila-cli_0.0.4_darwin_amd64.tar.gz"
-      sha256 "ee9f59d2c836ff05136098b96ba7d89a2ebffc56d736a9200db2e9e08f36c155"
+      url "https://github.com/jkaflik/pastila-cli/releases/download/v0.1.0/pastila-cli_0.1.0_darwin_amd64.tar.gz"
+      sha256 "c393f9214f84bafb35e68e6a536778d1c0f94c01bcec88981ffed32c156abba8"
 
-      def install
+      define_method(:install) do
         bin.install "pastila"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jkaflik/pastila-cli/releases/download/v0.0.4/pastila-cli_0.0.4_darwin_arm64.tar.gz"
-      sha256 "1face6fe1ea441544999caaa05bcbe6ad1b2a9ecbb923aa123f64b7a9b8b7080"
+      url "https://github.com/jkaflik/pastila-cli/releases/download/v0.1.0/pastila-cli_0.1.0_darwin_arm64.tar.gz"
+      sha256 "d95b5e45317c21c3e60e7c79c713450c09853f24841c9bb4861c94358212254f"
 
-      def install
+      define_method(:install) do
         bin.install "pastila"
       end
     end
@@ -28,16 +28,16 @@ class Pastila < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jkaflik/pastila-cli/releases/download/v0.0.4/pastila-cli_0.0.4_linux_amd64.tar.gz"
-      sha256 "9bece1a1078adbb7d4875d09452ed020d43420f2c2003e7674816017da574260"
-      def install
+      url "https://github.com/jkaflik/pastila-cli/releases/download/v0.1.0/pastila-cli_0.1.0_linux_amd64.tar.gz"
+      sha256 "fe8b8a7c447f8172091a2fe62438bcfec72c56fcda43586046fdb2e10a4ed734"
+      define_method(:install) do
         bin.install "pastila"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jkaflik/pastila-cli/releases/download/v0.0.4/pastila-cli_0.0.4_linux_arm64.tar.gz"
-      sha256 "5ad3be62f65f0f80a257b277aaee32d21f83ae879044a439e680806fc48478bd"
-      def install
+      url "https://github.com/jkaflik/pastila-cli/releases/download/v0.1.0/pastila-cli_0.1.0_linux_arm64.tar.gz"
+      sha256 "6bc582a46874776471835e4843d80c4e31b37bb21d9ae252f47e11d27fc5a946"
+      define_method(:install) do
         bin.install "pastila"
       end
     end
